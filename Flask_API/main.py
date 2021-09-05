@@ -33,7 +33,7 @@ api = Api(app)
 # =============================================================================#
 
 # Importing excel data
-sheet1 = pandas.read_excel('./sample2.xlsx')
+sheet1 = pandas.read_excel('./RBI-IFSC-Data.xlsx')
 sheet1 = sheet1.fillna('NA')
 
 
@@ -46,15 +46,28 @@ bank_record = {}
 for row in range(sheet1.shape[0]):
 
     MICR_CODE_temp = sheet1["MICR CODE"][row]
+    STD_temp = sheet1["STD CODE"][row]
+    CONTACT_temp = sheet1["CONTACT"][row]
 
     # If MICR_CODE_temp is a number
     if (type(MICR_CODE_temp)) == float:
         MICR_CODE_temp = int(MICR_CODE_temp)
 
-    temp = bankdataclass.BankModel(sheet1["BANK"][row],sheet1["IFSC"][row], MICR_CODE_temp, sheet1["BRANCH"][row],sheet1["ADDRESS"][row] ,int(sheet1["STD CODE"][row]),int(sheet1["CONTACT"][row]), sheet1["CITY"][row] ,sheet1["DISTRICT"][row], sheet1["STATE"][row])
+    # If STD_temp is a number
+    if (type(STD_temp)) == float:
+        STD_temp = int(STD_temp) 
+
+    # If CONTACT_temp is a number
+    if (type(CONTACT_temp)) == float:
+        CONTACT_temp = int(CONTACT_temp)        
+
+    temp = bankdataclass.BankModel(sheet1["BANK"][row],sheet1["IFSC"][row], MICR_CODE_temp, sheet1["BRANCH"][row],sheet1["ADDRESS"][row] ,STD_temp,CONTACT_temp, sheet1["CITY"][row] ,sheet1["DISTRICT"][row], sheet1["STATE"][row])
 
     # Storing data in a dictionary
     bank_record[temp.IFSC] = temp.__dict__
+
+# Data Processing done, ready to take request
+print("======================== ***  Data Processing done, ready to take request *** ==================================")
 
 
 # Vairibale to store LeaderBoard 
