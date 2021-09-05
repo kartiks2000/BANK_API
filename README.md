@@ -25,35 +25,6 @@ The application where the data is processed and stored (imported from a excel fi
 1. Responds to the request send by django API in for of JSON.
 
 
-#### We need to invok…
-[17:49, 9/4/2021] Kartik: "INVALID parameters passed"
-[18:01, 9/4/2021] Kartik: # BANK API Docs
-
-
-
-### There are two apps built:
-
-* *Django* based
-* *Flask* based
-
-### Django API
-
-The application where the user will be calling API requests to. The main functions of this layer is to :
-
-1. Works as main interface layer.
-1. Parameter validation.
-1. *Caching* of the *IFSC_Query* requests.
-1. Intracting with the internal layer (Flask app).
-1. Tracking *URL Hits* and *IFSC Hits*.
-
-### Flask API
-
-The application where the data is processed and stored (imported from a excel file). The main functions of this layer is to :
-
-1. Works as the inner layer of the system.
-1. Process and stores data of the bank.
-1. Manages *BANK DATA,SEARCH HISTORYandLEADERBOARD* data.
-1. Responds to the request send by django API in for of JSON.
 
 
 #### We need to invoke the APIs from the REST Client (postman or CURL).
