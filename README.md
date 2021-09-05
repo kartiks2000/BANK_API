@@ -272,4 +272,4 @@ The REST API to the example app is described below.
     "INVALID parameters passed"
     
     
-# THNAKS & REGARDS    
+# THANKS & REGARDS    
