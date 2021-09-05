@@ -59,6 +59,17 @@ The application where the data is processed and stored (imported from a excel fi
     http://127.0.0.1:8000/ifsc_query/
     
     
+## FIRST MAKE SURE FOR THE FLASK SERVER TO START COMPLETLY, ONLY START SENDING REQUESTS ONCE YOU RECIEVE THE BELOW MESSAGE IN THE CONSOLE :
+
+    "======================== ***  Data Processing done, ready to take request *** =================================="
+    
+    
+## IF A QUERY IS ALREADY CACHED AND ITS CACHED CACHED VALUE IS RESPONDED, YOU WILL RECIEVE THE BELOW RESPONSE :    
+
+    "------------------- cached_Response_delivered-------------------"
+
+    
+    
 # BANK REST API
 
 The REST API to the example app is described below.
@@ -259,3 +270,6 @@ The REST API to the example app is described below.
     eg-: 1 <= fetchcount <= 225, but we pass fetchcount = 700.
 
     "INVALID parameters passed"
+    
+    
+# THNAKS & REGARDS    
