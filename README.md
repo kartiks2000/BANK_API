@@ -1,6 +1,4 @@
-[17:31, 9/4/2021] Kartik: # BANK API Docs
-
-
+# BANK API
 
 ### There are two apps built:
 
