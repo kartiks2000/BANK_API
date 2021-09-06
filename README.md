@@ -76,6 +76,10 @@ The application where the data is processed and stored (imported from a excel fi
 
 The REST API to the example app is described below.
 
+## For more info regarding the working of the Bank API, Please visit:
+
+    https://documenter.getpostman.com/view/17374075/U16gP6uu
+
 
 
 ## Request Bank details for a given IFSC Code
