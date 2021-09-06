@@ -29,6 +29,8 @@ The application where the data is processed and stored (imported from a excel fi
 
 #### We need to invoke the APIs from the REST Client (postman or CURL).
 
+#### Use the provided POSTMAN collection for the django API.
+
 ## Install virtualenv
 
     python3 -m pip install --user virtualenv

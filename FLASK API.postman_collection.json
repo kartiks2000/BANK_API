@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "585607f7-a0d2-4234-b4e2-2eade3a85c10",
+		"name": "FLASK API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "IFSC Query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/ifsc_query/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"ifsc_query",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LeaderBoard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/leaderboard/DESC/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"leaderboard",
+						"DESC",
+						"11"
+					]
+				},
+				"description": "Fetches the top banks with max count\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Search history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/searchhistory",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"searchhistory"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

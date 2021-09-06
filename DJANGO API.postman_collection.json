@@ -1,0 +1,892 @@
+{
+	"info": {
+		"_postman_id": "f04cb41f-09df-4562-b997-9a65444bd723",
+		"name": "DJANGO API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "IFSC Query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/ifsc_query/ALLA0210014",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ifsc_query",
+						"ALLA0210014"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "IFSC Query Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/ifsc_query/ALLA0213505",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"ifsc_query",
+								"ALLA0213505"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 04 Sep 2021 07:24:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "219"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"BANK\": \"ALLAHABAD BANK\",\n    \"IFSC\": \"ALLA0213505\",\n    \"MICR_CODE\": \"NA\",\n    \"BRANCH\": \"SAM LARGE\",\n    \"ADDRESS\": \"17 PARLIAMENT STREET, NEW DELHI\",\n    \"STD_CODE\": 11,\n    \"CONTACT\": 40230166,\n    \"CITY\": \"NEW DELHI\",\n    \"DISTRICT\": \"NEW DELHI\",\n    \"STATE\": \"DELHI\"\n}"
+				}
+			]
+		},
+		{
+			"name": "LeaderBoard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/leaderboard/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"leaderboard",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LeaderBoard No param request example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/leaderboard/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"leaderboard",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 04 Sep 2021 07:25:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "355"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"THE ANDHRA PRADESH STATE COOPERATIVE BANK LIMITED\": 4,\n    \"ABHYUDAYA COOPERATIVE BANK LIMITED\": 3,\n    \"The Ajara Urban Co op Bank Ltd Ajara\": 3,\n    \"AKOLA JANATA COMMERCIAL COOPERATIVE BANK\": 3,\n    \"ALLAHABAD BANK\": 3,\n    \"THE AKOLA DISTRICT CENTRAL COOPERATIVE BANK\": 2,\n    \"ANDHRA BANK\": 2,\n    \"AU SMALL FINANCE BANK LIMITED\": 2,\n    \"BANK OF BARODA\": 2,\n    \"EQUITAS SMALL FINANCE BANK LIMITED\": 2\n}"
+				},
+				{
+					"name": "LeaderBoard sortorder param example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/leaderboard/?sortorder=ASC",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"leaderboard",
+								""
+							],
+							"query": [
+								{
+									"key": "sortorder",
+									"value": "ASC",
+									"description": "Order of sorting (\"ASC\",\"DESC\") Default=\"DESC\""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 04 Sep 2021 07:27:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "339"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"APNA SAHAKARI BANK LIMITED\": 1,\n    \"AMBARNATH JAIHIND COOP BANK LTD AMBARNATH\": 1,\n    \"EQUITAS SMALL FINANCE BANK LIMITED\": 2,\n    \"BANK OF BARODA\": 2,\n    \"AU SMALL FINANCE BANK LIMITED\": 2,\n    \"ANDHRA BANK\": 2,\n    \"THE AKOLA DISTRICT CENTRAL COOPERATIVE BANK\": 2,\n    \"ALLAHABAD BANK\": 3,\n    \"AKOLA JANATA COMMERCIAL COOPERATIVE BANK\": 3,\n    \"The Ajara Urban Co op Bank Ltd Ajara\": 3\n}"
+				},
+				{
+					"name": "LeaderBoard fetchcount param example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/leaderboard/?fetchcount=6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"leaderboard",
+								""
+							],
+							"query": [
+								{
+									"key": "fetchcount",
+									"value": "6",
+									"description": "number of results (1 to 225) Default=10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 04 Sep 2021 07:29:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "247"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"THE ANDHRA PRADESH STATE COOPERATIVE BANK LIMITED\": 4,\n    \"ABHYUDAYA COOPERATIVE BANK LIMITED\": 3,\n    \"The Ajara Urban Co op Bank Ltd Ajara\": 3,\n    \"AKOLA JANATA COMMERCIAL COOPERATIVE BANK\": 3,\n    \"ALLAHABAD BANK\": 3,\n    \"THE AKOLA DISTRICT CENTRAL COOPERATIVE BANK\": 2\n}"
+				},
+				{
+					"name": "LeaderBoard sortorder & fetchcount param example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/leaderboard/?sortorder=ASC&fetchcount=6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"leaderboard",
+								""
+							],
+							"query": [
+								{
+									"key": "sortorder",
+									"value": "ASC",
+									"description": "Order of sorting (ASC,DESC) Default=DESC"
+								},
+								{
+									"key": "fetchcount",
+									"value": "6",
+									"description": "number of results (1 to 225) Default=10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 04 Sep 2021 07:30:46 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "186"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"APNA SAHAKARI BANK LIMITED\": 1,\n    \"AMBARNATH JAIHIND COOP BANK LTD AMBARNATH\": 1,\n    \"EQUITAS SMALL FINANCE BANK LIMITED\": 2,\n    \"BANK OF BARODA\": 2,\n    \"AU SMALL FINANCE BANK LIMITED\": 2,\n    \"ANDHRA BANK\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "Search history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/searchhistory/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"searchhistory",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search history No param example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/searchhistory/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"searchhistory",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 04 Sep 2021 07:33:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "470"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"IFSC\": \"ALLA0213505\",\n        \"TIMESTAMP\": \"04-Sep-2021 (12:52:38.512031)\"\n    },\n    {\n        \"IFSC\": \"AUBL0002361\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:02:16.625391)\"\n    },\n    {\n        \"IFSC\": \"APBL0001021\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:02:34.053493)\"\n    },\n    {\n        \"IFSC\": \"ESFB0007029\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:02:44.676998)\"\n    },\n    {\n        \"IFSC\": \"APBL0004003\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:03:02.818665)\"\n    },\n    {\n        \"IFSC\": \"ANDB0000226\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:03:11.205982)\"\n    },\n    {\n        \"IFSC\": \"AJAR0000026\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:03:31.001160)\"\n    }\n]"
+				},
+				{
+					"name": "Search history sortorder param example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/searchhistory/?sortorder=DESC",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"searchhistory",
+								""
+							],
+							"query": [
+								{
+									"key": "sortorder",
+									"value": "DESC",
+									"description": "Order of sorting (ASC,DESC) Default=ASC"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 04 Sep 2021 07:35:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "470"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"IFSC\": \"AJAR0000026\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:03:31.001160)\"\n    },\n    {\n        \"IFSC\": \"ANDB0000226\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:03:11.205982)\"\n    },\n    {\n        \"IFSC\": \"APBL0004003\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:03:02.818665)\"\n    },\n    {\n        \"IFSC\": \"ESFB0007029\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:02:44.676998)\"\n    },\n    {\n        \"IFSC\": \"APBL0001021\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:02:34.053493)\"\n    },\n    {\n        \"IFSC\": \"AUBL0002361\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:02:16.625391)\"\n    },\n    {\n        \"IFSC\": \"ALLA0213505\",\n        \"TIMESTAMP\": \"04-Sep-2021 (12:52:38.512031)\"\n    }\n]"
+				},
+				{
+					"name": "Search history fetchcount param example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/searchhistory/?fetchcount=4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"searchhistory",
+								""
+							],
+							"query": [
+								{
+									"key": "fetchcount",
+									"value": "4",
+									"description": "number of results (1 to 10000) default = all"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 04 Sep 2021 07:39:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "269"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"IFSC\": \"ALLA0213505\",\n        \"TIMESTAMP\": \"04-Sep-2021 (12:52:38.512031)\"\n    },\n    {\n        \"IFSC\": \"AUBL0002361\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:02:16.625391)\"\n    },\n    {\n        \"IFSC\": \"APBL0001021\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:02:34.053493)\"\n    },\n    {\n        \"IFSC\": \"ESFB0007029\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:02:44.676998)\"\n    }\n]"
+				},
+				{
+					"name": "Search history sortorder & fetchcount param example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/searchhistory/?fetchcount=4&sortorder=DESC",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"searchhistory",
+								""
+							],
+							"query": [
+								{
+									"key": "fetchcount",
+									"value": "4",
+									"description": "number of results (1 to 10000) default = all"
+								},
+								{
+									"key": "sortorder",
+									"value": "DESC",
+									"description": "Order of sorting (ASC,DESC) Default=ASC"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 04 Sep 2021 07:40:48 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "269"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"IFSC\": \"AJAR0000026\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:03:31.001160)\"\n    },\n    {\n        \"IFSC\": \"ANDB0000226\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:03:11.205982)\"\n    },\n    {\n        \"IFSC\": \"APBL0004003\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:03:02.818665)\"\n    },\n    {\n        \"IFSC\": \"ESFB0007029\",\n        \"TIMESTAMP\": \"04-Sep-2021 (13:02:44.676998)\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "URL hit tracking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/url_hit",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"url_hit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "URL hit tracking example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/url_hit",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"url_hit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 04 Sep 2021 07:42:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"IFSC_QUERY\": 16,\n    \"LEADER_BOARD\": 7,\n    \"SEARCH_HISTORY\": 7\n}"
+				}
+			]
+		},
+		{
+			"name": "IFSC hit tracking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/ifsc_hit",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ifsc_hit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "IFSC hit tracking example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/ifsc_hit",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"ifsc_hit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 04 Sep 2021 07:42:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "113"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ALLA0213505\": 5,\n    \"AUBL0002361\": 3,\n    \"APBL0001021\": 3,\n    \"ESFB0007029\": 2,\n    \"APBL0004003\": 1,\n    \"ANDB0000226\": 1,\n    \"AJAR0000026\": 1\n}"
+				}
+			]
+		}
+	]
+}
